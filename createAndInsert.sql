@@ -66,51 +66,48 @@ CREATE TABLE Class_Prefects (
 );
 
 
--- Вставка даних у таблицю Teachers
 INSERT INTO Teachers (first_name) VALUES
 ('John Doe'), 
 ('Jane Smith');
 
--- Вставка даних у таблицю Subjects
 INSERT INTO Subjects (subject_name) VALUES
 ('Mathematics'), 
 ('Physics'), 
 ('Chemistry');
 
--- Вставка даних у таблицю Subject_Teacher
+
 INSERT INTO Subject_Teacher (teacher_id, subject_id) VALUES
 (1, 1), 
 (2, 2), 
 (2, 3);
 
--- Вставка даних у таблицю Classes
+
 INSERT INTO Classes (class_name) VALUES
 ('Class A'), 
 ('Class B');
 
--- Вставка даних у таблицю Students
+
 INSERT INTO Students (first_name, last_name, class_id, date_of_birth) VALUES
 ('Alice', 'Johnson', 1, '2005-04-10'), 
 ('Bob', 'Brown', 1, '2006-07-15'),
 ('Charlie', 'Davis', 2, '2005-12-20');
 
--- Вставка даних у таблицю Parents
+
 INSERT INTO Parents (name, phone) VALUES
 ('Mary Johnson', '123-456-7890'), 
 ('Peter Brown', '987-654-3210');
 
--- Вставка даних у таблицю ParentsOfStudents
 INSERT INTO ParentsOfStudents (parent_id, student_id) VALUES
 (1, 1), 
 (2, 2);
 
--- Вставка даних у таблицю Marks
+
 INSERT INTO Marks (student_id, subject_id, grade, grade_date, grade_type) VALUES
 (1, 1, 95.5, '2024-12-20', 'Exam'), 
 (2, 2, 88.0, '2024-12-21', 'Homework'), 
 (3, 3, 92.0, '2024-12-22', 'Quiz');
 
--- Вставка даних у таблицю Class_Prefects
+
 INSERT INTO Class_Prefects (student_id, class_id, start_date, end_date) VALUES
 (1, 1, '2024-01-01', '2024-12-31'), 
 (3, 2, '2024-02-01', NULL);
